@@ -1,29 +1,25 @@
-# Altiore Contribution UI
-
-## Description
-
-Caclulate contribution of users
+# React.js ТОРТ. Проект ТОРД для пари
 
 ## Installation
 
 ```bash
-$ yarn install
+$ npm i
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ yarn start
+$ npm start
 
 # production mode
-$ yarn build
+$ npm run build
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ yarn test
+$ npm run test
 ```
 
