@@ -1,0 +1,100 @@
+{
+  "name": "altiore_contrib.ui",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "8.11.3"
+  },
+  "dependencies": {
+    "@material-ui/core": "3.2.2",
+    "@material-ui/icons": "3.0.1",
+    "axios": "0.18.0",
+    "classnames": "2.2.6",
+    "express": "4.16.3",
+    "history": "4.7.2",
+    "liw-components": "2.2.3",
+    "localforage": "1.7.2",
+    "lodash-es": "^4.17.11",
+    "moment": "^2.22.2",
+    "react": "16.5.2",
+    "react-css-modules": "4.7.3",
+    "react-custom-scrollbars": "4.2.1",
+    "react-dom": "16.5.2",
+    "react-icons": "2.2.7",
+    "react-notification-system": "0.2.17",
+    "react-notification-system-redux": "1.2.0",
+    "react-popover": "^0.5.10",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.3.1",
+    "react-router-redux": "5.0.0-alpha.9",
+    "react-select": "2.0.0",
+    "react-swipeable-views": "0.12.17",
+    "redux": "4.0.0",
+    "redux-actions": "2.6.1",
+    "redux-axios-middleware": "4.0.0",
+    "redux-form": "7.4.2",
+    "redux-form-validators": "2.7.2",
+    "redux-persist": "5.10.0",
+    "redux-thunk": "2.3.0",
+    "reselect": "3.0.1",
+    "uniqid": "^5.0.3"
+  },
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "altiore start",
+    "build": "altiore build",
+    "test": "altiore test --env=jsdom",
+    "__relink-scripts": "rimraf node_modules/altiore-webpack-react && ln -s ~/www/webpack-react $PWD/node_modules/altiore-webpack-react",
+    "__relink-components": "rimraf node_modules/liw-components && ln -s ~/www/liw-components $PWD/node_modules/liw-components"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.4",
+    "@types/dotenv": "^4.0.3",
+    "@types/jest": "^23.0.0",
+    "@types/lodash-es": "^4.17.1",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^10.3.2",
+    "@types/react": "^16.4.17",
+    "@types/react-css-modules": "^4.6.1",
+    "@types/react-custom-scrollbars": "^4.0.5",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-icons": "^2.2.5",
+    "@types/react-notification-system-redux": "^1.1.5",
+    "@types/react-popover": "^0.5.2",
+    "@types/react-redux": "^6.0.2",
+    "@types/react-router-dom": "^4.2.7",
+    "@types/react-router-redux": "5.0.15",
+    "@types/react-select": "^2.0.2",
+    "@types/react-swipeable-views": "^0.12.2",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^2.3.0",
+    "@types/redux-form": "^7.2.6",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/reselect": "^2.2.0",
+    "@types/webpack-env": "^1.13.6",
+    "altiore-webpack-react": "2.2.0",
+    "husky": "^1.0.1",
+    "lint-staged": "7.2.2",
+    "prettier": "1.14.2",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && CI=\"true\" npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,css,md}": [
+      "prettier --write --print-width 120 --single-quote --trailing-comma es5",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix -t verbose",
+      "prettier --write --print-width 120 --single-quote --parser typescript --trailing-comma es5",
+      "git add"
+    ]
+  }
+}
